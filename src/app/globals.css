@@ -94,6 +94,15 @@ body {
   overflow-x: hidden;
 }
 
+/* Hide default cursor on devices with mouse (not touch) */
+@media (pointer: fine) {
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════
    TYPOGRAPHY
    ═══════════════════════════════════════════════════════════════════════════ */

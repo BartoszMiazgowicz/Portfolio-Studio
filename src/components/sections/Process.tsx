@@ -100,7 +100,7 @@ export function Process() {
 
       <Container className="relative z-10">
         {/* Header */}
-        <div className="text-center mb-20 md:mb-32">
+        <div className="text-center mb-12 sm:mb-20 md:mb-32">
           <FadeUp>
             <span className="text-label text-amber-core mb-6 block">
               Our Process
@@ -141,24 +141,24 @@ export function Process() {
                 className="process-card relative"
               >
                 {/* Card */}
-                <div className="glass-card glass-card-glow p-8 h-full group hover:border-amber-core/30 transition-all duration-500">
+                <div className="glass-card glass-card-glow p-5 sm:p-6 md:p-8 h-full group hover:border-amber-core/30 transition-all duration-500">
                   {/* Number */}
-                  <div className="flex items-center justify-between mb-8">
-                    <span className="text-5xl font-extralight text-amber-core/20 group-hover:text-amber-core/40 transition-colors duration-500">
+                  <div className="flex items-center justify-between mb-5 sm:mb-6 md:mb-8">
+                    <span className="text-4xl sm:text-5xl font-extralight text-amber-core/20 group-hover:text-amber-core/40 transition-colors duration-500">
                       {step.number}
                     </span>
-                    <div className="text-amber-core/60 group-hover:text-amber-core transition-colors duration-500">
+                    <div className="text-amber-core/60 group-hover:text-amber-core transition-colors duration-500 [&>svg]:w-6 [&>svg]:h-6 sm:[&>svg]:w-8 sm:[&>svg]:h-8">
                       {step.icon}
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-light text-white-pure mb-4 group-hover:text-amber-core transition-colors duration-500">
+                  <h3 className="text-lg sm:text-xl font-light text-white-pure mb-3 sm:mb-4 group-hover:text-amber-core transition-colors duration-500">
                     {step.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-sm text-gray-muted leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-muted leading-relaxed">
                     {step.description}
                   </p>
 

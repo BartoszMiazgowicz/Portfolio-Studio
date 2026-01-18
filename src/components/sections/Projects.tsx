@@ -142,9 +142,9 @@ function ProjectCard({
           />
 
           {/* Project Number */}
-          <div className="absolute top-6 left-6">
+          <div className="absolute top-4 sm:top-6 left-4 sm:left-6">
             <span
-              className="text-[10px] tracking-[0.3em] text-white/40 font-light"
+              className="text-[9px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.3em] text-white/40 font-light"
               style={{ writingMode: "vertical-rl" }}
             >
               {String(index + 1).padStart(2, "0")}
@@ -152,17 +152,17 @@ function ProjectCard({
           </div>
 
           {/* Year Badge */}
-          <div className="absolute top-6 right-6">
-            <span className="text-[10px] tracking-[0.2em] text-white/50 font-light">
+          <div className="absolute top-4 sm:top-6 right-4 sm:right-6">
+            <span className="text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] text-white/50 font-light">
               {project.year}
             </span>
           </div>
 
           {/* Content */}
-          <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+          <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
             {/* Category */}
             <motion.span
-              className="text-[10px] tracking-[0.2em] uppercase text-amber-core/80 font-medium mb-3 block"
+              className="text-[9px] sm:text-[10px] tracking-[0.15em] sm:tracking-[0.2em] uppercase text-amber-core/80 font-medium mb-2 sm:mb-3 block"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
@@ -171,12 +171,12 @@ function ProjectCard({
             </motion.span>
 
             {/* Title */}
-            <h3 className="text-2xl md:text-3xl font-light text-white-pure mb-2 leading-tight">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-light text-white-pure mb-1 sm:mb-2 leading-tight">
               {project.title}
             </h3>
 
             {/* Subtitle */}
-            <p className="text-sm text-white/50 font-light mb-4">
+            <p className="text-xs sm:text-sm text-white/50 font-light mb-3 sm:mb-4">
               {project.subtitle}
             </p>
 
@@ -231,7 +231,7 @@ export function Projects() {
 
       <Container className="relative z-10">
         {/* Header */}
-        <div className="text-center mb-20 md:mb-32">
+        <div className="text-center mb-12 sm:mb-20 md:mb-32">
           <FadeUp>
             <span className="text-label text-amber-core mb-6 block">
               Selected Work
@@ -271,7 +271,7 @@ export function Projects() {
 
         {/* View All Button */}
         <FadeUp delay={0.2}>
-          <div className="flex justify-center mt-16 md:mt-24">
+          <div className="flex justify-center mt-10 sm:mt-16 md:mt-24">
             <motion.button
               className="group flex items-center gap-4 text-white-soft hover:text-amber-core transition-colors duration-300"
               whileHover={{ x: 5 }}

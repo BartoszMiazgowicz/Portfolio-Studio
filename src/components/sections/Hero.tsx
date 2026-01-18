@@ -106,7 +106,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-black-rich/40 via-transparent to-black-rich/40" />
 
       {/* Content */}
-      <div className="hero-content relative z-10 flex flex-col items-center justify-center h-screen text-center px-6">
+      <div className="hero-content relative z-10 flex flex-col items-center justify-center h-screen text-center px-4 sm:px-6">
         {/* Ambient Glow */}
         <GlowEffect
           size="lg"
@@ -115,13 +115,13 @@ export function Hero() {
 
         {/* Label */}
         <motion.div
-          className="overflow-hidden mb-8"
+          className="overflow-hidden mb-6 sm:mb-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
           <motion.span
-            className="block text-label text-amber-core"
+            className="block text-[10px] sm:text-label text-amber-core tracking-[0.15em] sm:tracking-[0.08em] uppercase font-medium"
             initial={{ y: 30 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.215, 0.61, 0.355, 1] }}
@@ -133,9 +133,9 @@ export function Hero() {
         {/* Headline with character animation */}
         <h1
           ref={headlineRef}
-          className="text-white-pure max-w-5xl mb-8 leading-[0.95]"
+          className="text-white-pure max-w-5xl mb-6 sm:mb-8 leading-[0.95]"
           style={{
-            fontSize: "clamp(2.5rem, 8vw, 7rem)",
+            fontSize: "clamp(2rem, 8vw, 7rem)",
             fontWeight: 200,
             letterSpacing: "-0.03em",
           }}
@@ -182,7 +182,7 @@ export function Hero() {
 
         {/* Subheadline */}
         <motion.p
-          className="text-white-soft/70 max-w-xl mb-12 text-lg md:text-xl font-light leading-relaxed"
+          className="text-white-soft/70 max-w-xl mb-8 sm:mb-12 text-base sm:text-lg md:text-xl font-light leading-relaxed px-2"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.1 }}
@@ -193,15 +193,15 @@ export function Hero() {
 
         {/* CTAs */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-6 items-center"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center w-full sm:w-auto px-4 sm:px-0"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.3 }}
         >
-          <MagneticButton variant="primary" className="px-10 py-5 text-base" strength={0.35}>
+          <MagneticButton variant="primary" className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 text-sm sm:text-base" strength={0.35}>
             Start a Project
           </MagneticButton>
-          <MagneticButton variant="secondary" className="px-10 py-5 text-base" strength={0.35}>
+          <MagneticButton variant="secondary" className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 text-sm sm:text-base" strength={0.35}>
             Explore Work
           </MagneticButton>
         </motion.div>
@@ -209,28 +209,28 @@ export function Hero() {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.8 }}
       >
-        <div className="flex flex-col items-center gap-3">
-          <span className="text-[10px] text-white-soft/50 tracking-[0.3em] uppercase">
+        <div className="flex flex-col items-center gap-2 sm:gap-3">
+          <span className="text-[9px] sm:text-[10px] text-white-soft/50 tracking-[0.2em] sm:tracking-[0.3em] uppercase">
             Scroll
           </span>
           <motion.div
-            className="w-[1px] h-12 bg-gradient-to-b from-amber-core to-transparent"
+            className="w-[1px] h-8 sm:h-12 bg-gradient-to-b from-amber-core to-transparent"
             animate={{ scaleY: [1, 0.5, 1], opacity: [1, 0.5, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />
         </div>
       </motion.div>
 
-      {/* Corner Accents */}
-      <div className="absolute top-8 left-8 w-16 h-16 border-l border-t border-white/10 z-20" />
-      <div className="absolute top-8 right-8 w-16 h-16 border-r border-t border-white/10 z-20" />
-      <div className="absolute bottom-8 left-8 w-16 h-16 border-l border-b border-white/10 z-20" />
-      <div className="absolute bottom-8 right-8 w-16 h-16 border-r border-b border-white/10 z-20" />
+      {/* Corner Accents - hidden on mobile */}
+      <div className="hidden sm:block absolute top-6 sm:top-8 left-6 sm:left-8 w-12 sm:w-16 h-12 sm:h-16 border-l border-t border-white/10 z-20" />
+      <div className="hidden sm:block absolute top-6 sm:top-8 right-6 sm:right-8 w-12 sm:w-16 h-12 sm:h-16 border-r border-t border-white/10 z-20" />
+      <div className="hidden sm:block absolute bottom-6 sm:bottom-8 left-6 sm:left-8 w-12 sm:w-16 h-12 sm:h-16 border-l border-b border-white/10 z-20" />
+      <div className="hidden sm:block absolute bottom-6 sm:bottom-8 right-6 sm:right-8 w-12 sm:w-16 h-12 sm:h-16 border-r border-b border-white/10 z-20" />
     </section>
   );
 }

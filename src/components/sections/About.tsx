@@ -70,7 +70,7 @@ export function About() {
       </div>
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-20 items-center">
           {/* Image Side */}
           <div className="lg:col-span-5 order-2 lg:order-1">
             <FadeUp>
@@ -108,14 +108,14 @@ export function About() {
 
                 {/* Floating Badge */}
                 <motion.div
-                  className="absolute -bottom-6 -right-6 md:-right-10 glass-card p-6 rounded-xl"
+                  className="absolute -bottom-4 sm:-bottom-6 right-2 sm:-right-6 md:-right-10 glass-card p-4 sm:p-6 rounded-xl"
                   initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                  <div className="text-amber-core text-4xl font-extralight mb-1">2014</div>
-                  <div className="text-gray-muted text-xs tracking-wider">Est.</div>
+                  <div className="text-amber-core text-2xl sm:text-4xl font-extralight mb-1">2014</div>
+                  <div className="text-gray-muted text-[10px] sm:text-xs tracking-wider">Est.</div>
                 </motion.div>
               </div>
             </FadeUp>
@@ -165,13 +165,13 @@ export function About() {
 
             {/* Stats */}
             <FadeUp delay={0.8}>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 py-8 border-y border-white/5">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 py-6 sm:py-8 border-y border-white/5">
                 {stats.map((stat, index) => (
                   <div key={stat.label} className="text-center md:text-left">
-                    <div className="stat-value text-3xl md:text-4xl font-extralight text-amber-core mb-2">
+                    <div className="stat-value text-2xl sm:text-3xl md:text-4xl font-extralight text-amber-core mb-1 sm:mb-2">
                       {stat.value}
                     </div>
-                    <div className="text-xs text-gray-muted tracking-wider uppercase">
+                    <div className="text-[10px] sm:text-xs text-gray-muted tracking-wider uppercase">
                       {stat.label}
                     </div>
                   </div>

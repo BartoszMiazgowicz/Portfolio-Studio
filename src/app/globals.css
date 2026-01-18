@@ -363,3 +363,47 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--amber-deep);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOBILE IMPROVEMENTS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 640px) {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Better touch targets */
+  a, button {
+    min-height: 44px;
+  }
+
+  /* Smaller glass card padding on mobile */
+  .glass-card {
+    padding: 1.25rem;
+  }
+
+  /* Adjust glow effects for mobile performance */
+  .glow-ambient,
+  .glow-ambient-lg {
+    filter: blur(40px);
+    opacity: 0.7;
+  }
+}
+
+/* Hide scrollbar on mobile */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
